@@ -1,0 +1,428 @@
+@import "reset";
+@import "anim";
+
+/*general styles*/
+body {
+  background-color: #FDFDFD;
+}
+
+.wrapper {
+  margin: 0 80px;
+}
+
+.container {
+  height: calc(100vh - 160px);  
+  width: calc(100vw - 160px);
+//   margin-bottom: 80px;
+}
+
+/* header  */
+.headerTop {
+  padding: 43px 0 16px 0;
+  position: fixed;
+  z-index: 10;
+  width: calc(100vw - 160px);
+  background-color: #fff;
+  /* padding: 43px 0 16px 0;
+  display: flex;
+  justify-content: space-between; */
+}
+
+.headerTop-helper {
+  display: flex;
+  justify-content: space-between;
+}
+
+  .header-logo-eng {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #272822;
+  }
+
+  .header-lg-switcher {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    &-lg-line {
+        width: 0;
+        height: 21px;
+        border-left: 1px solid #272822;
+    }
+
+    &-lg:hover {
+        color: #B82B21;
+    }
+  }
+
+  .header-lg-switcher-lg {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #272822;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .lg-switcher-active {
+    color: #B82B21;
+  }
+
+
+.burger {
+  position: fixed;
+  z-index: 10;
+  left: 62px;
+  top: 446px;	
+
+  width: 58px;
+  height: 33px;
+}
+
+/* burger  */
+span.btburger{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  /* left: -18px;
+  top: 354px;	 */
+
+  width: 58px;
+  height: 33px;
+
+  justify-content: center;
+  z-index: 2;
+}
+
+/*задаем стиль для наши полосок*/
+span.btburger-lines ,
+span.btburger-lines:after , 
+span.btburger-lines:before {
+  /* z-index: 2; */
+  position: absolute; 
+  top: 40%;
+  width: 48px;
+  height: 5px;
+  transition: width 2s;
+  transition: left 2s;
+  
+  background-color: #0A1117; 
+}
+
+/*далее указвываем расположение верхней и нижней полосок*/
+span.btburger-lines::before {
+  content: '';
+  top: -13px;
+  left: -8px;
+}
+
+span.btburger-lines::after {
+  content: '';
+  top: 13px;
+  left: -8px;
+}
+
+span.btburger:hover span.btburger-lines ,
+span.btburger:hover span.btburger-lines:after , 
+span.btburger:hover span.btburger-lines:before {
+  background-color: #a2a2a2;
+}
+
+/* Links */
+.links {
+  position: fixed;
+  z-index: 10;
+  right: 26px;
+  top: 390px;
+
+  width: 28px;
+  height: 112px;
+}
+
+.links-helper a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+// headerDown
+.headerDown {
+    padding: 80px 0 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: calc(100vw - 160px);
+    background-color: #fff;
+}
+
+
+  /* Welcome text Block  */
+.hero {
+  position: relative;
+  display: flex;
+  height: calc(100vh - 80px);  
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 80px 0 0;
+}
+
+.hero-left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #2d72dc;
+  transition: width 1s;
+}
+// hidden part 
+.hero-left-text-topInfo-box {
+    opacity: 0;
+    width: 600px;
+    height: 215px;
+    padding: 0 180px 0 160px ;
+    transition: opacity 2s;
+}
+
+.hero-left-text-topInfo-year-eng {
+    display: block;
+    font-size: 18px;
+    font-style: italic;
+    color: #B82B21;
+    font-family: Roboto;
+}
+
+.hero-left-text-topInfo-name-eng {
+    display: block;
+    font-weight: 900;
+    color: #0A1117;
+    font-family: Roboto;
+    font-size: 32px;
+    margin: 0 0 50px
+}
+
+.hero-left-text-topInfo-info-eng {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #D8E1E3;
+}
+
+// welcome text 
+.hero-left > .hero-left-text {
+  position: absolute;
+  display: inline-block;
+  width: 378px;
+  right: -221px;
+}
+
+.welcome-text {
+  font-family: Roboto;
+  font-size: 80px;
+  font-weight: 900;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0A1117;
+  text-transform: uppercase;
+}
+
+.welcome-text-red {
+   color: #B82B21;
+}
+
+.hero-right {
+  width: 50%;
+  height: 100%;
+  background-color: #f5f5f5;
+  transition: width 1s;
+}
+
+.hero:hover {
+    .hero-left {
+        width: 100%;
+        .hero-left-text-topInfo-box {
+            opacity: 1;
+        }
+    }
+
+    .hero-right {
+        width: 0%;
+    }
+}
+
+
+
+/* main */
+.main {
+    // margin-bottom: 80px;
+  }
+
+/* photo box 1  */
+.photoBox-1 {
+//   height: 820px;
+  background-image: url(../input/depositphotos-156974368-xl-2015-1.png);
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* skills */
+.skills {
+  background: #f5f5f5;
+  box-sizing: border-box;
+  padding: 80px 80px 75px;
+
+    &-title {
+    font-family: Roboto;
+    font-size: 80px;
+    font-weight: 900;
+    color: #0A1117;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    }
+
+    &-knowledgeBox {
+        position: relative;
+        display: flex;
+
+        &-text {
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 0 40px 0 0;
+
+            &-name {
+                font-family: Roboto;
+                font-size: 32px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #0A1117;
+                margin-bottom: 32px;
+                width: 400px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-progress {
+            box-sizing: border-box;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            padding: 12px 0 0;
+
+            &-line {
+                height: 14px;
+                background-color: #B82B21;
+                margin: 0 0 56px;
+                border-radius: 7px;
+            }
+
+            .prLine-htmlcss { width: 2.5%; transition: width 1s;}
+            .prLine-responsiveLayout { width: 2.5%; transition: width 1s;}
+            .prLine-bootstrap { width: 2.5%; transition: width 1s;}
+            .prLine-jquery { width: 2.5%; transition: width 1s;}
+            .prLine-cssPreprocessors { width: 2.5%; transition: width 1s;}
+            .prLine-gulp { width: 2.5%; transition: width 1s;}
+            .prLine-git { width: 2.5%; transition: width 1s;}
+        }
+    }
+
+    &:hover {
+        .skills-knowledgeBox {
+            &-progress {
+                    .prLine-htmlcss { width: 100%;}
+                    .prLine-responsiveLayout { width: 75%;}
+                    .prLine-bootstrap { width: 60%;}
+                    .prLine-jquery { width: 45%;}
+                    .prLine-cssPreprocessors { width: 75%;}
+                    .prLine-gulp { width: 65%;}
+                    .prLine-git { width: 80%;}
+            
+            }
+        }
+    }
+}
+
+.projects {
+    &-title {
+        font-weight: 900;
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f5f5f5;
+    }
+}
+
+
+
+// footer 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 0;
+    margin-bottom: 80px;
+
+    &-left {
+        &-text {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #B82B21;
+        }
+
+        &-mail {
+            font-family: Roboto;
+            font-size: 32px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #0A1117;
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        &-phoneNumber{
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000000;
+        }
+    }
+}
