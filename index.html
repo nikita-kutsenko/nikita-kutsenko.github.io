@@ -6,16 +6,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-</html>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="headerTop">
                 <div class="headerTop-helper">
-                    <p class="header-logo-eng">Nikita Kutsenko</p>
+                    <a href="" class="header-logo-eng">Nikita Kutsenko</a>
                     <div class="header-lg-switcher">
-                        <span class="header-lg-switcher-lg lg-switcher-active">en</span>
+                        <span class="header-lg-switcher-lg header-lg-switcher-active">en</span>
                         <span class="header-lg-switcher-lg-line"></span>
                         <span class="header-lg-switcher-lg">ua</span>
                     </div> <!-- header-lg-switcher -->
@@ -25,7 +24,7 @@
             <!-- items in the sides of display  -->
             <!-- burger  -->
             <nav class="navBurger">
-                <div class="burger">
+                <div class="navBurger-burger">
                     <span id="id-burger" class="btburger">
                         <span class="btburger-lines"></span>
                     </span>
@@ -33,15 +32,27 @@
             </nav>
 
             <section class="hero container">
+                <div class="hero-navBurger">
+                    <div class="hero-navBurger-links"> 
+                        <span class="hero-navBurger-links-span"><a href="#" class="hero-navBurger-links-span-a">Skills</a></span>
+                        <span class="hero-navBurger-links-span"><a href="#" class="hero-navBurger-links-span-a">Projects</a></span>
+                        <span class="hero-navBurger-links-span"><a href="#" class="hero-navBurger-links-span-a">Experience</a></span>
+                    </div>
+                    <span class="hero-navBurger-phoneNumber">+38(098)409-23-00</span>
+                    <div class="hero-navBurger-contact">
+                        <p class="hero-navBurger-contact-text">Whant to collaborate?</p>
+                        <span class="hero-navBurger-contact-mail">email me</span>
+                    </div>
+                </div>
                 <div class="hero-left">
                     <div class="hero-left-text-topInfo-box">
-                        <p class="hero-left-text-topInfo-year-eng">
+                        <p class="hero-left-text-topInfo-box-year-eng">
                             since 2010
                         </p>
-                        <p class="hero-left-text-topInfo-name-eng">
+                        <p class="hero-left-text-topInfo-box-name-eng">
                             Markup Developer
                         </p>
-                        <p class="hero-left-text-topInfo-info-eng">
+                        <p class="hero-left-text-topInfo-box-info-eng">
                             Strong professional focus and personal interest to UI/UX design and Front-End engineering 
                         </p>
                     </div>
@@ -121,13 +132,51 @@
                 </div> <!-- skills-knowledgeBox -->
             </div> <!-- skills -->
 
+            <!-- projects  -->
             <div class="projects container">
                 <p class="projects-title">projects</p>
                 <div class="projects-block"> 
                     <p class="projects-block-title">MyLib</p>
                     <p class="projects-block-description">Component library with html and css code examples</p>
-                    <label class="projects-block-link">GitLab</label>
+                    <a class="projects-block-link" href="https://nikita-kutsenko.github.io/mylib/" target="_blank">GitLab</a>
                 </div>
+                <div class="projects-block"> 
+                    <p class="projects-block-title">LOGO - Adaptive Layout web-site</p>
+                    <p class="projects-block-description">html page with burger menu</p>
+                    <a class="projects-block-link" href="https://nikita-kutsenko.github.io/logo-adaptive/" target="_blank">GitLab</a>
+                </div>
+            </div>
+
+            <!-- experience -->
+            <div class="exp container">
+                <p class="exp-title">EXPERIENCE</p>
+                <div class="experience">
+                    <div class="experience-left">
+                        <div class="experience-left-circle"> 
+                            1
+                        </div><!-- experience-left-circle -->
+                        <div class="experience-left-line experience-left-line-1"></div>
+                        <!-- <div class="experience-left-circle"> 
+                            2
+                        </div> -->
+                        <!-- experience-left-circle -->
+                    </div><!-- experience-left -->
+                    <div class="experience-right">
+                        <div class="experience-right-block"> 
+                            <p class="experience-right-block-time">december 2019 - march 2020</p>
+                            <p class="experience-right-block-title">IT school Hillel</p>
+                            <p class="experience-right-block-description">Front-End Basic</p>
+                            <a class="experience-right-block-link" href="#">certificate</a>
+                        </div> <!-- experience-right-block -->
+                        <!-- <div class="experience-right-block"> 
+                            <p class="experience-right-block-time">march 2020 - june 2020</p>
+                            <p class="experience-right-block-title">IT school Hillel</p>
+                            <p class="experience-right-block-description">Front-End Pro</p>
+                            <a class="experience-right-block-link" href="#">certificate</a>
+                        </div> -->
+                        <!-- experience-right-block -->
+                    </div> <!-- experience-right -->
+                </div><!-- experience-blocks -->
             </div>
         </main>
 
@@ -142,4 +191,14 @@
             </div>
         </footer>
     </div> <!-- wrapper -->
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+		 	$('.btburger').click(function () {
+		 		$('.wrapper').toggleClass('active-burger');
+		 	});
+		});
+	</script>
 </body>
+</html>
