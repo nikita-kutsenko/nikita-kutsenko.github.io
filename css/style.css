@@ -430,13 +430,14 @@ body {
 .footer {
   display: flex;
   position: fixed;
-  width: calc(100vw - 160px);
+  padding: 10px 80px;
+  width: 100vw;
   background-color: #FDFDFD;
   z-index: 100;
-  bottom: 10px;
+  left: 0;
+  bottom: 0;
   justify-content: space-between;
-  box-sizing: border-box;
-  min-width: 1024px; }
+  box-sizing: border-box; }
   .footer-left-text {
     font-size: 18px;
     font-weight: normal;
