@@ -46,14 +46,16 @@ table {
 
 /*general styles*/
 body {
-  background-color: #FDFDFD; }
+  background-color: #FDFDFD;
+  min-width: 1024px; }
 
 .wrapper {
-  margin: 0 80px 160px; }
+  padding: 0 80px 160px;
+  box-sizing: border-box; }
 
 .container {
   min-height: calc(100vh - 160px);
-  width: calc(100vw - 160px); }
+  box-sizing: border-box; }
 
 /* header  */
 .header {
@@ -432,7 +434,9 @@ body {
   background-color: #FDFDFD;
   z-index: 100;
   bottom: 10px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 1024px; }
   .footer-left-text {
     font-size: 18px;
     font-weight: normal;

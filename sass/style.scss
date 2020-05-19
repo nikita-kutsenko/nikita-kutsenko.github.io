@@ -4,15 +4,19 @@
 /*general styles*/
 body {
   background-color: #FDFDFD;
+  min-width: 1024px;
 }
 
 .wrapper {
-  margin: 0 80px 160px;
+  padding: 0 80px 160px;
+  box-sizing: border-box;
 }
 
 .container {
   min-height: calc(100vh - 160px);  
-  width: calc(100vw - 160px);
+//   width: calc(100vw - 160px);
+  box-sizing: border-box;
+//   min-width: 1024px;
 }
 
 
@@ -557,6 +561,8 @@ body {
     z-index: 100;
     bottom: 10px;
     justify-content: space-between;
+    box-sizing: border-box;
+    min-width: 1024px;
     // padding: 80px 0 0;
     // margin-bottom: 80px;
 
