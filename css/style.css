@@ -46,8 +46,7 @@ table {
 
 /*general styles*/
 body {
-  background-color: #FDFDFD;
-  min-width: 1024px; }
+  background-color: #FDFDFD; }
 
 .wrapper {
   padding: 0 80px 160px;
@@ -276,15 +275,14 @@ body {
       box-sizing: border-box;
       padding: 0 40px 0 0; }
       .main .skills-knowledgeBox-text-name {
-        font-size: 32px;
+        font-size: 24px;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #0A1117;
-        margin-bottom: 32px;
-        width: 400px; }
+        margin-bottom: 32px; }
         .main .skills-knowledgeBox-text-name:last-of-type {
           margin-bottom: 0; }
     .main .skills-knowledgeBox-progress {
@@ -296,7 +294,7 @@ body {
       .main .skills-knowledgeBox-progress-line {
         height: 14px;
         background-color: #B82B21;
-        margin: 0 0 56px;
+        margin: 0 0 32px;
         border-radius: 7px; }
       .main .skills-knowledgeBox-progress .prLine-htmlcss {
         width: 14px;
@@ -347,7 +345,7 @@ body {
     padding: 0 0 80px; }
   .main .projects-block {
     padding: 0 0 80px;
-    width: 600px; }
+    max-width: 600px; }
     .main .projects-block-title {
       color: #D8E1E3;
       font-size: 32px;
@@ -405,7 +403,7 @@ body {
         height: 50px; }
     .main .exp .experience-right-block {
       padding: 0 0 30px;
-      width: 600px; }
+      max-width: 600px; }
       .main .exp .experience-right-block-time {
         color: #B82B21;
         font-size: 18px;
@@ -432,6 +430,7 @@ body {
   position: fixed;
   padding: 10px 80px;
   width: 100vw;
+  height: 80px;
   background-color: #FDFDFD;
   z-index: 100;
   left: 0;
@@ -595,4 +594,17 @@ body {
   .header .hero-left .welcome-text {
     font-size: 60px; }
   .header .hero:hover .hero-left-text {
+    display: none; } }
+
+@media only screen and (max-width: 1023px) {
+  /* Welcome text Block  */
+  .header .hero-left .welcome-text {
+    font-size: 40px; }
+  .main .projects-title,
+  .main .skills-title,
+  .main .exp-title {
+    font-size: 40px; }
+  .active-burger .header .hero-navBurger {
+    width: 100%; }
+  .active-burger .header .hero-left {
     display: none; } }
