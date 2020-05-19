@@ -27,7 +27,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  font-family: "Roboto"; }
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; }
 
 ol, ul {
   list-style: none; }
@@ -49,7 +49,7 @@ body {
   background-color: #FDFDFD; }
 
 .wrapper {
-  margin: 0 80px; }
+  margin: 0 80px 160px; }
 
 .container {
   min-height: calc(100vh - 160px);
@@ -62,7 +62,7 @@ body {
   /* Links */ }
   .header .headerTop {
     padding: 43px 0 16px 0;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     width: calc(100vw - 160px);
     background-color: #FDFDFD; }
@@ -70,7 +70,6 @@ body {
       display: flex;
       justify-content: space-between; }
       .header .headerTop-helper .header-logo-eng {
-        font-family: Roboto;
         font-size: 18px;
         font-weight: normal;
         font-stretch: normal;
@@ -78,21 +77,15 @@ body {
         letter-spacing: normal;
         color: #272822;
         text-decoration: none; }
-      .header .headerTop-helper .header-logo-eng:hover {
-        color: #B82B21;
-        text-transform: uppercase;
-        font-weight: bold;
-        cursor: pointer; }
       .header .headerTop-helper .header-lg-switcher {
         width: 60px;
-        display: flex;
+        display: none;
         justify-content: space-between; }
         .header .headerTop-helper .header-lg-switcher-lg-line {
           width: 0;
           height: 21px;
           border-left: 1px solid #272822; }
         .header .headerTop-helper .header-lg-switcher-lg {
-          font-family: Roboto;
           font-size: 18px;
           font-weight: normal;
           font-stretch: normal;
@@ -106,7 +99,7 @@ body {
         .header .headerTop-helper .header-lg-switcher-active {
           color: #B82B21; }
   .header .navBurger-burger {
-    position: fixed;
+    position: absolute;
     z-index: 10;
     left: 54px;
     top: calc(50% - 12px);
@@ -178,23 +171,20 @@ body {
       .header .hero-left-text-topInfo-box {
         opacity: 0;
         width: 600px;
-        padding: 0 180px 0 160px;
+        padding: 0 180px 0 80px;
         transition: opacity 2s, top 1s; }
         .header .hero-left-text-topInfo-box-year-eng {
           display: block;
           font-size: 18px;
           font-style: italic;
-          color: #FDFDFD;
-          font-family: Roboto; }
+          color: #FDFDFD; }
         .header .hero-left-text-topInfo-box-name-eng {
           display: block;
           font-weight: 900;
           color: #0A1117;
-          font-family: Roboto;
           font-size: 32px;
           margin: 0 0 50px; }
         .header .hero-left-text-topInfo-box-info-eng {
-          font-family: Roboto;
           font-size: 32px;
           font-weight: normal;
           font-stretch: normal;
@@ -205,17 +195,18 @@ body {
       .header .hero-left-text {
         position: absolute;
         display: inline-block;
-        width: 378px;
-        right: -221px; }
+        width: 800px;
+        left: 50%;
+        transition: width 1s; }
         .header .hero-left-text .welcome-text {
-          font-family: Roboto;
           font-size: 80px;
           font-weight: 900;
           font-stretch: normal;
           line-height: normal;
           letter-spacing: normal;
           color: #0A1117;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          transition: font-size 1s; }
         .header .hero-left-text .welcome-text-red {
           color: #B82B21; }
     .header .hero-right {
@@ -227,6 +218,10 @@ body {
       width: 100%; }
       .header .hero:hover .hero-left .hero-left-text-topInfo-box {
         opacity: 1; }
+      .header .hero:hover .hero-left-text {
+        width: 600px; }
+        .header .hero:hover .hero-left-text .welcome-text {
+          font-size: 60px; }
     .header .hero:hover .hero-right {
       width: 0%; }
   .header .links {
@@ -266,7 +261,6 @@ body {
   box-sizing: border-box;
   padding: 80px 80px 75px; }
   .main .skills-title {
-    font-family: Roboto;
     font-size: 80px;
     font-weight: 900;
     color: #0A1117;
@@ -280,7 +274,6 @@ body {
       box-sizing: border-box;
       padding: 0 40px 0 0; }
       .main .skills-knowledgeBox-text-name {
-        font-family: Roboto;
         font-size: 32px;
         font-weight: normal;
         font-stretch: normal;
@@ -346,7 +339,6 @@ body {
   .main .projects-title {
     font-weight: 900;
     color: #2d72dc;
-    font-family: Roboto;
     font-size: 80px;
     font-weight: 900;
     text-transform: uppercase;
@@ -356,18 +348,15 @@ body {
     width: 600px; }
     .main .projects-block-title {
       color: #D8E1E3;
-      font-family: Roboto;
       font-size: 32px;
       font-weight: 900;
       padding: 0 0 32px; }
     .main .projects-block-description {
       color: #D8E1E3;
-      font-family: Roboto;
       font-size: 32px;
       padding: 0 0 16px; }
     .main .projects-block-link {
       color: #B82B21;
-      font-family: Roboto;
       font-size: 18px;
       cursor: pointer; }
 
@@ -379,7 +368,6 @@ body {
   .main .exp-title {
     font-weight: 900;
     color: #0A1117;
-    font-family: Roboto;
     font-size: 80px;
     font-weight: 900;
     text-transform: uppercase;
@@ -394,7 +382,6 @@ body {
       padding: 10px 30px 10px 20px; }
       .main .exp .experience-left-circle {
         color: #B82B21;
-        font-family: Roboto;
         font-size: 36px;
         font-weight: 900;
         display: flex;
@@ -419,36 +406,34 @@ body {
       width: 600px; }
       .main .exp .experience-right-block-time {
         color: #B82B21;
-        font-family: Roboto;
         font-size: 18px;
         padding: 0 0 10px; }
       .main .exp .experience-right-block-title {
         color: #0A1117;
-        font-family: Roboto;
         font-size: 32px;
         font-weight: 900;
         padding: 0 0 16px; }
       .main .exp .experience-right-block-description {
         color: #0A1117;
-        font-family: Roboto;
         font-size: 32px;
         padding: 0 0 24px; }
       .main .exp .experience-right-block-description-2 {
         padding: 0; }
       .main .exp .experience-right-block-link {
         color: #B82B21;
-        font-family: Roboto;
         font-size: 18px;
         text-decoration: underline;
         cursor: pointer; }
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  padding: 80px 0 0;
-  margin-bottom: 80px; }
+  position: fixed;
+  width: calc(100vw - 160px);
+  background-color: #FDFDFD;
+  z-index: 100;
+  bottom: 10px;
+  justify-content: space-between; }
   .footer-left-text {
-    font-family: Roboto;
     font-size: 18px;
     font-weight: normal;
     font-stretch: normal;
@@ -457,7 +442,6 @@ body {
     letter-spacing: normal;
     color: #B82B21; }
   .footer-left-mail {
-    font-family: Roboto;
     font-size: 32px;
     font-weight: 900;
     font-stretch: normal;
@@ -474,7 +458,6 @@ body {
     display: flex;
     align-items: center; }
     .footer-right-phoneNumber {
-      font-family: Roboto;
       font-size: 18px;
       font-weight: normal;
       font-stretch: normal;
@@ -487,6 +470,32 @@ body {
         text-decoration: none; }
       .footer-right-phoneNumber:hover a {
         color: #B82B21; }
+
+.btn-top {
+  position: fixed;
+  right: 100px;
+  bottom: 60px;
+  z-index: 101;
+  width: 12px;
+  height: 48px; }
+
+.btn-top * {
+  fill: #B82B21; }
+
+.active-burger .header .navBurger-burger .btburger {
+  width: 100px; }
+  .active-burger .header .navBurger-burger .btburger span.btburger-lines {
+    background-color: #B82B21;
+    left: 20px;
+    width: 60px; }
+  .active-burger .header .navBurger-burger .btburger span.btburger-lines:after {
+    background-color: #B82B21;
+    left: -26px;
+    width: 52px; }
+  .active-burger .header .navBurger-burger .btburger span.btburger-lines:before {
+    background-color: #B82B21;
+    left: -14px;
+    width: 48px; }
 
 .active-burger .header .hero-navBurger {
   width: 50%;
@@ -502,7 +511,6 @@ body {
       display: block; }
       .active-burger .header .hero-navBurger-links-span-a {
         display: inline-block;
-        font-family: Roboto;
         font-size: 32px;
         font-weight: 900;
         color: #272822;
@@ -521,10 +529,9 @@ body {
   .active-burger .header .hero-navBurger-phoneNumber {
     display: block;
     min-width: 160px;
-    font-family: Roboto;
     font-size: 18px;
     color: #000000;
-    padding: 0 0 80px;
+    padding: 0 0 20px;
     opacity: 1; }
     .active-burger .header .hero-navBurger-phoneNumber-link {
       color: #272822;
@@ -536,7 +543,6 @@ body {
     min-width: 180px;
     opacity: 1; }
     .active-burger .header .hero-navBurger-contact-text {
-      font-family: Roboto;
       font-size: 18px;
       font-weight: normal;
       font-stretch: normal;
@@ -545,7 +551,6 @@ body {
       letter-spacing: normal;
       color: #B82B21; }
     .active-burger .header .hero-navBurger-contact-mail {
-      font-family: Roboto;
       font-size: 32px;
       font-weight: 900;
       font-stretch: normal;
@@ -577,8 +582,12 @@ body {
 .active-burger .header .hero:hover .hero-right {
   width: 0%; }
 
-.active-burger .main {
-  display: none; }
-
-.active-burger .footer {
-  display: none; }
+/*tablet*/
+@media only screen and (max-width: 1439px) {
+  /* Welcome text Block  */
+  .header .hero-left-text {
+    left: 30%; }
+  .header .hero-left .welcome-text {
+    font-size: 60px; }
+  .header .hero:hover .hero-left-text {
+    display: none; } }

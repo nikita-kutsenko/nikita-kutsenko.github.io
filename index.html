@@ -2,18 +2,18 @@
 <html>
 <head>
     <title>Nikita Kutsenko portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" href="input/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header id="linkTop"class="header">
             <div class="headerTop">
                 <div class="headerTop-helper">
-                    <a href="" class="header-logo-eng">Nikita Kutsenko</a>
+                    <h1  class="header-logo-eng">Nikita Kutsenko</h1>
                     <div class="header-lg-switcher">
                         <span class="header-lg-switcher-lg header-lg-switcher-active">en</span>
                         <span class="header-lg-switcher-lg-line"></span>
@@ -36,14 +36,14 @@
                 <div class="hero-navBurger">
                     <div class="hero-navBurger-links"> 
                         <span class="hero-navBurger-links-span"><a href="#linkSkills" class="hero-navBurger-links-span-a">Skills</a></span>
-                        <span class="hero-navBurger-links-span"><a href="#" class="hero-navBurger-links-span-a">Projects</a></span>
-                        <span class="hero-navBurger-links-span"><a href="#" class="hero-navBurger-links-span-a">Experience</a></span>
+                        <span class="hero-navBurger-links-span"><a href="#linkProjects" class="hero-navBurger-links-span-a">Projects</a></span>
+                        <span class="hero-navBurger-links-span"><a href="#linkExperience" class="hero-navBurger-links-span-a">Experience</a></span>
                     </div>
                     <span class="hero-navBurger-phoneNumber"><a class="hero-navBurger-phoneNumber-link" href="tel:+380984092300">+38 (098) 409-23-00</a></span>
-                    <div class="hero-navBurger-contact">
+                    <!-- <div class="hero-navBurger-contact">
                         <p class="hero-navBurger-contact-text">Whant to collaborate?</p>
                         <span class="hero-navBurger-contact-mail"><a class="hero-navBurger-contact-mail-link" href="mailto:nikita.kutsenko2@gmail.com">email me</a></span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="hero-left">
                     <div class="hero-left-text-topInfo-box">
@@ -54,13 +54,13 @@
                             Markup Developer
                         </p>
                         <p class="hero-left-text-topInfo-box-info-eng">
-                            Strong professional focus and personal interest to UI/UX design and Front-End engineering 
+                            fond of learning and development <br>in Front-End 
                         </p>
                     </div>
                     <div class="hero-left-text">
-                        <label class="hero-left-text-up-eng welcome-text">welcome</label>
+                        <label class="hero-left-text-up-eng welcome-text">Talk is cheap</label>
                         <div class="hero-left-text-down-eng">
-                            <label class="welcome-text">text</label>
+                            <label class="welcome-text">Show me the code</label>
                             <label class="welcome-text welcome-text-red">.</label>
                         </div> <!-- hero-left-text-down -->
                     </div> <!-- hero-left-text -->
@@ -109,8 +109,8 @@
             <div class="photoBox-1 container"></div>
 
             <!-- skills -->
-            <p><a name="linkSkills"></a></p>
-            <div class="skills container">
+            <!-- <p><a name="linkSkills"></a></p> -->
+            <div id="linkSkills" class="skills container">
                 <p class="skills-title">skills</p>
                 <div class="skills-knowledgeBox">
                     <div class="skills-knowledgeBox-text">
@@ -135,8 +135,8 @@
             </div> <!-- skills -->
 
             <!-- projects  -->
-            <p><a name="linkProjects"></a></p>
-            <div class="projects container">
+            <!-- <p><a name="linkProjects"></a></p> -->
+            <div id="linkProjects" class="projects container">
                 <p class="projects-title">projects</p>
                 <div class="projects-block"> 
                     <p class="projects-block-title">MyLib</p>
@@ -151,8 +151,8 @@
             </div>
 
             <!-- experience -->
-            <p><a name="linkExperience"></a></p>
-            <div class="exp container">
+            <!-- <p><a name="linkExperience"></a></p> -->
+            <div id="linkExperience" class="exp container">
                 <p class="exp-title">EXPERIENCE</p>
                 <div class="experience">
                     <div class="experience-left">
@@ -173,7 +173,7 @@
 
                         </div> <!-- experience-right-block -->
                         <div class="experience-right-block"> 
-                            <p class="experience-right-block-time">may 2020 - now/p>
+                            <p class="experience-right-block-time">may 2020 - now</p>
                             <p class="experience-right-block-title">IT school Hillel</p>
                             <p class="experience-right-block-description experience-right-block-description-2">Front-End Pro</p>
                         </div><!-- experience-right-block -->
@@ -185,13 +185,19 @@
 
         <footer class="footer">
             <div class="footer-left">
-                <p class="footer-left-text">Whant to collaborate?</p>
+                <p class="footer-left-text">Want to collaborate?</p>
                 <span class="footer-left-mail"><a class="footer-left-mail-link" href="mailto:nikita.kutsenko2@gmail.com">email me</a></span>
             </div>
             <div class="footer-right">
                 <span class="footer-right-phoneNumber"><a class="footer-right-phoneNumber-link" href="tel:+380984092300">+38 (098) 409-23-00</a></span>
             </div>
         </footer>
+        <a href="#linkTop" class="btn-top">
+            <svg viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.98459 4.40178C4.01063 4.29464 4.00021 4.17856 3.95855 4.08928L2.13563 0.660705C2.10438 0.607127 2.06271 0.571424 2.01584 0.571424C1.96896 0.571424 1.92209 0.607143 1.89084 0.660705L0.0418848 4.08928C0.000222101 4.17856 -0.0101959 4.29464 0.0158445 4.40178C0.0418848 4.5 0.0991791 4.57142 0.166882 4.57142H1.33355V15.7143C1.33355 15.875 1.40647 16 1.50022 16H2.50021C2.59397 16 2.66688 15.875 2.66688 15.7143V4.57142H3.83355C3.90126 4.57142 3.95855 4.50892 3.98459 4.40178Z" fill="#272822"/>
+            </svg>
+        </a>
+        
     </div> <!-- wrapper -->
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>

@@ -7,7 +7,7 @@ body {
 }
 
 .wrapper {
-  margin: 0 80px;
+  margin: 0 80px 160px;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
     // HEADER TOP 
     .headerTop {
         padding: 43px 0 16px 0;
-        position: fixed;
+        position: absolute;
         z-index: 10;
         width: calc(100vw - 160px);
         background-color: #FDFDFD;
@@ -32,7 +32,7 @@ body {
             justify-content: space-between;
 
             .header-logo-eng {
-                font-family: Roboto;
+                
                 font-size: 18px;
                 font-weight: normal;
                 font-stretch: normal;
@@ -42,16 +42,9 @@ body {
                 text-decoration: none;
             }
 
-            .header-logo-eng:hover {
-                color: #B82B21;
-                text-transform: uppercase;
-                font-weight: bold;
-                cursor: pointer;
-            }
-
             .header-lg-switcher {
                 width: 60px;
-                display: flex;
+                display: none;
                 justify-content: space-between;
                 
                 &-lg-line {
@@ -61,7 +54,7 @@ body {
                 }
 
                 &-lg {
-                    font-family: Roboto;
+                    
                     font-size: 18px;
                     font-weight: normal;
                     font-stretch: normal;
@@ -86,7 +79,7 @@ body {
     /* BURGER  */
     .navBurger {
         &-burger {
-            position: fixed;
+            position: absolute;
             z-index: 10;
             left: 54px;;
             top: calc(50% - 12px);
@@ -189,7 +182,7 @@ body {
                 opacity: 0;
                 width: 600px;
                 // height: 215px;
-                padding: 0 180px 0 160px ;
+                padding: 0 180px 0 80px ;
                 transition: opacity 2s, top 1s;
 
                 &-year-eng {
@@ -197,20 +190,20 @@ body {
                     font-size: 18px;
                     font-style: italic;
                     color: #FDFDFD;
-                    font-family: Roboto;
+                    
                 }
                 
                 &-name-eng {
                     display: block;
                     font-weight: 900;
                     color: #0A1117;
-                    font-family: Roboto;
+                    
                     font-size: 32px;
                     margin: 0 0 50px
                 }
                 
                 &-info-eng {
-                    font-family: Roboto;
+                    
                     font-size: 32px;
                     font-weight: normal;
                     font-stretch: normal;
@@ -225,11 +218,13 @@ body {
             &-text {
                 position: absolute;
                 display: inline-block;
-                width: 378px;
-                right: -221px;
+                width: 800px;
+                left: 50%;
+                transition: width 1s;
+                
 
                 .welcome-text {
-                    font-family: Roboto;
+                    
                     font-size: 80px;
                     font-weight: 900;
                     font-stretch: normal;
@@ -237,6 +232,7 @@ body {
                     letter-spacing: normal;
                     color: #0A1117;
                     text-transform: uppercase;
+                    transition: font-size 1s;
                 }
 
                 .welcome-text-red {
@@ -257,6 +253,13 @@ body {
                 width: 100%;
                 .hero-left-text-topInfo-box {
                     opacity: 1;
+                }
+                &-text {
+                    width: 600px;
+
+                    .welcome-text {
+                        font-size: 60px;
+                    }
                 }
             }
         
@@ -288,10 +291,12 @@ body {
         &-helper a:hover > svg > g > path {
             fill: #B82B21;
         }
+
     }
     
     // headerDown
     .headerDown {
+        // display: none;
         padding: 80px 0 0;
         position: fixed;
         bottom: 0;
@@ -320,7 +325,7 @@ body {
         padding: 80px 80px 75px;
       
         &-title {
-            font-family: Roboto;
+            
             font-size: 80px;
             font-weight: 900;
             color: #0A1117;
@@ -338,7 +343,7 @@ body {
                 padding: 0 40px 0 0;
 
                 &-name {
-                    font-family: Roboto;
+                    
                     font-size: 32px;
                     font-weight: normal;
                     font-stretch: normal;
@@ -402,7 +407,7 @@ body {
         &-title {
             font-weight: 900;
             color: #2d72dc;
-            font-family: Roboto;
+            
             font-size: 80px;
             font-weight: 900;
             text-transform: uppercase;
@@ -415,7 +420,7 @@ body {
             width: 600px;
             &-title {
                 color: #D8E1E3;
-                font-family: Roboto;
+                
                 font-size: 32px;
                 font-weight: 900;
                 padding: 0 0 32px;
@@ -423,7 +428,7 @@ body {
 
             &-description {
                 color: #D8E1E3;
-                font-family: Roboto;
+                
                 font-size: 32px;
                 padding: 0 0 16px;
                 // width: 600px;
@@ -431,7 +436,7 @@ body {
 
             &-link {
                 color: #B82B21;
-                font-family: Roboto;
+                
                 font-size: 18px;
                 // text-decoration: underline;
                 cursor: pointer;
@@ -448,7 +453,7 @@ body {
         &-title {
             font-weight: 900;
             color: #0A1117;
-            font-family: Roboto;
+            
             font-size: 80px;
             font-weight: 900;
             text-transform: uppercase;
@@ -467,7 +472,7 @@ body {
                 padding: 10px 30px 10px 20px;
                 &-circle {
                     color: #B82B21;
-                    font-family: Roboto;
+                    
                     font-size: 36px;
                     font-weight: 900;
                     display: flex;
@@ -503,14 +508,14 @@ body {
                     width: 600px;
                     &-time {
                         color: #B82B21;
-                        font-family: Roboto;
+                        
                         font-size: 18px;
                         padding: 0 0 10px;
                     }
 
                     &-title {
                         color: #0A1117;
-                        font-family: Roboto;
+                        
                         font-size: 32px;
                         font-weight: 900;
                         padding: 0 0 16px;
@@ -518,7 +523,7 @@ body {
         
                     &-description {
                         color: #0A1117;
-                        font-family: Roboto;
+                        
                         font-size: 32px;
                         padding: 0 0 24px;
                         // width: 600px;
@@ -530,7 +535,7 @@ body {
         
                     &-link {
                         color: #B82B21;
-                        font-family: Roboto;
+                        
                         font-size: 18px;
                         text-decoration: underline; 
                         cursor: pointer;
@@ -546,13 +551,18 @@ body {
 // footer 
 .footer {
     display: flex;
+    position: fixed;
+    width: calc(100vw - 160px);
+    background-color: #FDFDFD;
+    z-index: 100;
+    bottom: 10px;
     justify-content: space-between;
-    padding: 80px 0 0;
-    margin-bottom: 80px;
+    // padding: 80px 0 0;
+    // margin-bottom: 80px;
 
     &-left {
         &-text {
-            font-family: Roboto;
+            
             font-size: 18px;
             font-weight: normal;
             font-stretch: normal;
@@ -563,7 +573,7 @@ body {
         }
 
         &-mail {
-            font-family: Roboto;
+            
             font-size: 32px;
             font-weight: 900;
             font-stretch: normal;
@@ -587,7 +597,7 @@ body {
         display: flex;
         align-items: center;
         &-phoneNumber {
-            font-family: Roboto;
+            
             font-size: 18px;
             font-weight: normal;
             font-stretch: normal;
@@ -607,7 +617,17 @@ body {
         }
     }
 }
-
+.btn-top {
+    position: fixed;
+    right: 100px;
+    bottom: 60px;
+    z-index: 101;
+    width:12px;
+    height: 48px;
+}
+.btn-top * {
+    fill: #B82B21;
+}
 
 
 
@@ -617,8 +637,21 @@ body {
         .navBurger {
             &-burger {
                 .btburger {
-                    &-lines {
-                        
+                    width: 100px;
+                    span.btburger-lines {
+                        background-color: #B82B21;
+                        left: 20px;
+                        width: 60px;
+                    }
+                    span.btburger-lines:after {
+                        background-color: #B82B21;
+                        left: -26px;
+                        width: 52px;
+                    }
+                    span.btburger-lines:before {
+                        background-color: #B82B21;
+                        left: -14px;
+                        width: 48px;
                     }
                 }
             }
@@ -640,7 +673,7 @@ body {
 
                         &-a {
                             display: inline-block;
-                            font-family: Roboto;
+                            
                             font-size: 32px;
                             font-weight: 900;
                             color: #272822;
@@ -671,10 +704,10 @@ body {
                 &-phoneNumber {
                     display: block;
                     min-width: 160px;
-                    font-family: Roboto;
+                    
                     font-size: 18px;
                     color: #000000;
-                    padding: 0 0 80px;
+                    padding: 0 0 20px;
                     opacity: 1;
                     &-link {
                         color: #272822;
@@ -694,7 +727,7 @@ body {
                     opacity: 1;
 
                     &-text {
-                        font-family: Roboto;
+                        
                         font-size: 18px;
                         font-weight: normal;
                         font-stretch: normal;
@@ -705,7 +738,7 @@ body {
                     }
             
                     &-mail {
-                        font-family: Roboto;
+                        
                         font-size: 32px;
                         font-weight: 900;
                         font-stretch: normal;
@@ -758,11 +791,35 @@ body {
         }
     }
 
-    .main {
-        display: none;
-    }
+    // .main {
+    //     display: none;
+    // }
 
-    .footer {
-        display: none;
+    // .footer {
+    //     display: none;
+    // }
+}
+
+/*tablet*/
+@media only screen 
+	and (max-width: 1439px) {
+        /* Welcome text Block  */
+    .header .hero {
+        &-left {
+            &-text {
+                left: 30%;
+            }
+            .welcome-text {
+                font-size: 60px;
+            }
+        }
+
+        &:hover {
+            .hero-left {
+                &-text {
+                    display: none;
+                }
+            }
+        }
     }
 }
