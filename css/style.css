@@ -178,9 +178,8 @@ body {
       .header .hero-left-text-topInfo-box {
         opacity: 0;
         width: 600px;
-        height: 215px;
         padding: 0 180px 0 160px;
-        transition: opacity 2s; }
+        transition: opacity 2s, top 1s; }
         .header .hero-left-text-topInfo-box-year-eng {
           display: block;
           font-size: 18px;
@@ -256,7 +255,7 @@ body {
 
 /* main */
 .main .photoBox-1 {
-  background-image: url(../input/depositphotos-156974368-xl-2015-1.png);
+  background-image: url(../input/background-photo.JPG);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -375,7 +374,8 @@ body {
 .main .exp {
   box-sizing: border-box;
   padding: 80px;
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  min-height: 0; }
   .main .exp-title {
     font-weight: 900;
     color: #0A1117;
@@ -391,7 +391,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 30px 0 20px; }
+      padding: 10px 30px 10px 20px; }
       .main .exp .experience-left-circle {
         color: #B82B21;
         font-family: Roboto;
@@ -412,8 +412,10 @@ body {
         margin-bottom: 20px; }
       .main .exp .experience-left-line-1 {
         height: 50px; }
+      .main .exp .experience-left-line-2 {
+        height: 50px; }
     .main .exp .experience-right-block {
-      padding: 0 0 80px;
+      padding: 0 0 30px;
       width: 600px; }
       .main .exp .experience-right-block-time {
         color: #B82B21;
@@ -431,6 +433,8 @@ body {
         font-family: Roboto;
         font-size: 32px;
         padding: 0 0 24px; }
+      .main .exp .experience-right-block-description-2 {
+        padding: 0; }
       .main .exp .experience-right-block-link {
         color: #B82B21;
         font-family: Roboto;
@@ -461,6 +465,11 @@ body {
     line-height: normal;
     letter-spacing: normal;
     color: #0A1117; }
+    .footer-left-mail-link {
+      color: #272822;
+      text-decoration: none; }
+    .footer-left-mail:hover a {
+      color: #B82B21; }
   .footer-right {
     display: flex;
     align-items: center; }
@@ -473,6 +482,11 @@ body {
       line-height: normal;
       letter-spacing: normal;
       color: #000000; }
+      .footer-right-phoneNumber-link {
+        color: #272822;
+        text-decoration: none; }
+      .footer-right-phoneNumber:hover a {
+        color: #B82B21; }
 
 .active-burger .header .hero-navBurger {
   width: 50%;
@@ -484,19 +498,21 @@ body {
   .active-burger .header .hero-navBurger-links {
     display: block;
     opacity: 1; }
-    .active-burger .header .hero-navBurger-links-span-a {
-      display: inline-block;
-      font-family: Roboto;
-      font-size: 32px;
-      font-weight: 900;
-      color: #272822;
-      text-decoration: none;
-      padding: 0 0 32px; }
-    .active-burger .header .hero-navBurger-links-span-a:hover {
-      color: #B82B21;
-      border-bottom: 2px solid #B82B21;
-      padding: 0 0 10px;
-      margin-bottom: 20px; }
+    .active-burger .header .hero-navBurger-links-span {
+      display: block; }
+      .active-burger .header .hero-navBurger-links-span-a {
+        display: inline-block;
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 900;
+        color: #272822;
+        text-decoration: none;
+        padding: 0 0 32px; }
+      .active-burger .header .hero-navBurger-links-span-a:hover {
+        color: #B82B21;
+        border-bottom: 2px solid #B82B21;
+        padding: 0 0 10px;
+        margin-bottom: 20px; }
     .active-burger .header .hero-navBurger-links-span:last-of-type-a {
       padding: 0 0 80px; }
     .active-burger .header .hero-navBurger-links-span:last-of-type-a:hover {
@@ -510,6 +526,11 @@ body {
     color: #000000;
     padding: 0 0 80px;
     opacity: 1; }
+    .active-burger .header .hero-navBurger-phoneNumber-link {
+      color: #272822;
+      text-decoration: none; }
+    .active-burger .header .hero-navBurger-phoneNumber:hover a {
+      color: #B82B21; }
   .active-burger .header .hero-navBurger-contact {
     display: block;
     min-width: 180px;
@@ -532,6 +553,11 @@ body {
       line-height: normal;
       letter-spacing: normal;
       color: #0A1117; }
+      .active-burger .header .hero-navBurger-contact-mail-link {
+        color: #272822;
+        text-decoration: none; }
+      .active-burger .header .hero-navBurger-contact-mail:hover a {
+        color: #B82B21; }
 
 .active-burger .header .hero-left {
   width: 50%; }

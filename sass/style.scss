@@ -188,9 +188,9 @@ body {
             &-text-topInfo-box {
                 opacity: 0;
                 width: 600px;
-                height: 215px;
+                // height: 215px;
                 padding: 0 180px 0 160px ;
-                transition: opacity 2s;
+                transition: opacity 2s, top 1s;
 
                 &-year-eng {
                     display: block;
@@ -306,7 +306,7 @@ body {
 /* main */
 .main {
     .photoBox-1 {
-        background-image: url(../input/depositphotos-156974368-xl-2015-1.png);
+        background-image: url(../input/background-photo.JPG);
       
         background-attachment: fixed;
         background-position: center;
@@ -443,6 +443,7 @@ body {
         box-sizing: border-box;
         padding: 80px;
         background: #f5f5f5;
+        min-height: 0;
 
         &-title {
             font-weight: 900;
@@ -463,7 +464,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 0 30px 0 20px;
+                padding: 10px 30px 10px 20px;
                 &-circle {
                     color: #B82B21;
                     font-family: Roboto;
@@ -490,11 +491,15 @@ body {
                     // height: 114px;
                     height: 50px;
                 }
+                &-line-2 {
+                    // height: 114px;
+                    height: 50px;
+                }
             }
 
             &-right {
                 &-block {
-                    padding: 0 0 80px;
+                    padding: 0 0 30px;
                     width: 600px;
                     &-time {
                         color: #B82B21;
@@ -517,6 +522,10 @@ body {
                         font-size: 32px;
                         padding: 0 0 24px;
                         // width: 600px;
+                    }
+
+                    &-description-2 {
+                        padding: 0;
                     }
         
                     &-link {
@@ -562,13 +571,22 @@ body {
             line-height: normal;
             letter-spacing: normal;
             color: #0A1117;
+            &-link {
+                color: #272822;
+                text-decoration: none;
+            }
+            &:hover {
+                a {
+                    color: #B82B21;
+                }
+            }
         }
     }
 
     &-right {
         display: flex;
         align-items: center;
-        &-phoneNumber{
+        &-phoneNumber {
             font-family: Roboto;
             font-size: 18px;
             font-weight: normal;
@@ -577,6 +595,15 @@ body {
             line-height: normal;
             letter-spacing: normal;
             color: #000000;
+            &-link {
+                color: #272822;
+                text-decoration: none;
+            }
+            &:hover {
+                a {
+                    color: #B82B21;
+                }
+            }
         }
     }
 }
@@ -609,6 +636,8 @@ body {
                     opacity: 1;
 
                     &-span {
+                        display: block;
+
                         &-a {
                             display: inline-block;
                             font-family: Roboto;
@@ -647,6 +676,15 @@ body {
                     color: #000000;
                     padding: 0 0 80px;
                     opacity: 1;
+                    &-link {
+                        color: #272822;
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        a {
+                            color: #B82B21;
+                        }
+                    }
                 }
                 
                 &-contact {
@@ -675,6 +713,15 @@ body {
                         line-height: normal;
                         letter-spacing: normal;
                         color: #0A1117;
+                        &-link {
+                            color: #272822;
+                            text-decoration: none;
+                        }
+                        &:hover {
+                            a {
+                                color: #B82B21;
+                            }
+                        }
                     }
                 }
             }
@@ -698,6 +745,7 @@ body {
             &:hover {
                 .hero-left {
                     width: 50%;
+
                     .hero-left-text-topInfo-box {
                         opacity: 1;
                     }
